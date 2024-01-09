@@ -4,8 +4,7 @@ let allBtns = document.querySelectorAll(".button");
 let resultBox = document.querySelector("#result-box");
 let clearBtn = document.querySelector("#clear");
 let total = document.querySelector("#total");
-let memoryStorage = 0;
-let mcButton = document.querySelector('#mcButton')
+let deleteButton = document.querySelector("#deleteBtn");
 
 //creating array and storing all the buttons
 let btnSpread = [...btns];
@@ -41,11 +40,22 @@ total.addEventListener('click', () => {
     console.log(evalute(allInputs));
 })
 
-//memory clean  - MC Button
+//delete number or operator
 
-mcButton.addEventListener('click', () => {
-    memoryStorage = 0;
-    console.log("Memory Cleared:", memoryStorage);
+deleteButton.addEventListener('click',()=>{
+    let currentValue = document.getElementById('result-box').innerHTML;
+
+    if(currentValue==='0')
+    {
+        document.getElementById('result-box').innerHTML = currentValue;
+    }
+    else
+    {
+        //removing the last entered number
+        let newValue = currentValue.slice(0,-1);
+        //updating the innerHTML of resultbox
+        document.getElementById('result-box').innerHTML = newValue;
+    }
 })
 
 //clear all inputs
