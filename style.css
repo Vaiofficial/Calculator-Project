@@ -1,1 +1,73 @@
-git 
+body{
+    background: rgb(214, 208, 208);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    background: #dbd3db;
+    width: 320px;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: -3px -3px 7px #c5bebe73 , 2px 2px 5px #85838373;
+    margin: auto;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .result{
+    width: 100%;
+    height: 150px;
+    box-shadow: inset 2px 2px 5px #a9aaaf , inset -5px -5px 10px #ffffff73;
+}
+.container .result p{
+    font-size: 50px;
+    text-align: right;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.container .buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+.container .buttons .button,
+.container .buttons .num-btn{
+    cursor: grab;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #a0a3ad , -5px -5px 10px #bdb0b08a;
+}
+
+.button:hover{
+    color: #3498db;
+}
+
+.container .buttons .zero{
+    /* to make space in right side of zero */
+    grid-column: 1/3;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #abaeb9 , -5px -5px 10px #c0b3b373;
+}
+
+.action-btn{
+    color: grey;
+    font-weight: bold;
+}
+
+.calc-action-btn{
+    color: rgb(67, 182, 67);
+    font-size: 22px;
+    font-weight: bold;
+}
